@@ -3,6 +3,7 @@ import type {
   GoogleBooksVolume,
 } from "../types/GoogleBooks";
 import type { Book } from "../types/Book";
+import fetchWithTimeout from "../utils/fetchWithTimeout";
 
 const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
@@ -23,7 +24,7 @@ export const searchBooks = async (
   url.searchParams.set("maxResults", maxResults.toString());
   url.searchParams.set("printType", "books");
 
-  const response = await fetch(url.toString());
+  const response = await fetchWithTimeout(async () => fetch(url.toString()));
 
   if (!response.ok) {
     throw new Error(`Falha ao buscar livros: ${response.statusText}`);
@@ -54,7 +55,9 @@ export const transformGoogleBookToBook = (
 
 export const getBookById = async (id: string): Promise<Book | null> => {
   try {
-    const response = await fetch(`${GOOGLE_BOOKS_API_URL}/${id}`);
+    const response = await fetchWithTimeout(async () =>
+      fetch(`${GOOGLE_BOOKS_API_URL}/${id}`),
+    );
 
     if (!response.ok) {
       throw new Error(`Falha ao obter livro: ${response.statusText}`);

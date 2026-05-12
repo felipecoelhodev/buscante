@@ -1,10 +1,13 @@
 import type { Book } from "../types/Book";
+import fetchWithTimeout from "../utils/fetchWithTimeout";
 
 const FAVORITES_API_URL = "http://localhost:3001/favorites";
 
 export const getFavorites = async (): Promise<Book[]> => {
   try {
-    const response = await fetch(FAVORITES_API_URL);
+    const response = await fetchWithTimeout(async () =>
+      fetch(FAVORITES_API_URL),
+    );
 
     if (!response.ok) {
       throw new Error(`Falha ao buscar favoritos: ${response.statusText}`);
@@ -19,13 +22,15 @@ export const getFavorites = async (): Promise<Book[]> => {
 
 export const addToFavorites = async (book: Book): Promise<Book> => {
   try {
-    const response = await fetch(FAVORITES_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(book),
-    });
+    const response = await fetchWithTimeout(async () =>
+      fetch(FAVORITES_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(book),
+      }),
+    );
 
     if (!response.ok) {
       throw new Error(
@@ -42,9 +47,11 @@ export const addToFavorites = async (book: Book): Promise<Book> => {
 
 export const removeFromFavorites = async (bookId: string): Promise<void> => {
   try {
-    const response = await fetch(`${FAVORITES_API_URL}/${bookId}`, {
-      method: "DELETE",
-    });
+    const response = await fetchWithTimeout(async () =>
+      fetch(`${FAVORITES_API_URL}/${bookId}`, {
+        method: "DELETE",
+      }),
+    );
 
     if (!response.ok) {
       throw new Error(`Falha ao remover dos favoritos: ${response.statusText}`);
