@@ -24,7 +24,7 @@ export interface GoogleBooksVolume {
 export interface GoogleBooksResponse {
   kind: string;
   totalItems: number;
-  items?: GoogleBooksVolume[];
+  items?: Book[];
 }
 
 export interface SearchState {
