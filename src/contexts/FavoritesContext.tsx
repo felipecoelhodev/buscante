@@ -1,4 +1,11 @@
-import { createContext, useContext, useReducer, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useReducer,
+  useEffect,
+  useCallback,
+  useMemo,
+} from "react";
 import type { ReactNode } from "react";
 import type { Book } from "../types/Book";
 import {
@@ -6,6 +13,10 @@ import {
   addToFavorites,
   removeFromFavorites,
 } from "../services/favoritesApi";
+import {
+  AsyncStateManager,
+  executeWithState,
+} from "../utils/asyncStateManager";
 
 interface FavoritesState {
   favorites: Book[];
@@ -82,62 +93,66 @@ interface FavoritesProviderProps {
 }
 
 export const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
+  const manager = useMemo(() => new AsyncStateManager(), []);
+
   const [state, dispatch] = useReducer(favoritesReducer, initialState);
 
-  const refreshFavorites = async () => {
+  const refreshFavorites = useCallback(async () => {
     dispatch({ type: "FETCH_START" });
 
-    try {
-      const favorites = await getFavorites();
+    const favorites = await executeWithState(
+      manager,
+      "refresh_favorites",
+      getFavorites,
+    );
+    if (favorites) {
       dispatch({ type: "FETCH_SUCCESS", payload: favorites });
-    } catch (error) {
+    }
+
+    if (manager.getError("refresh_favorites")) {
       dispatch({
         type: "FETCH_ERROR",
         payload:
-          error instanceof Error
-            ? error.message
-            : "Falha ao carregar favoritos",
+          manager.getError("refresh_favorites") ??
+          "Falha ao carregar favoritos",
       });
     }
-  };
+  }, [dispatch, manager]);
 
   const addFavorite = async (book: Book) => {
-    console.log("[FavoritesContext] Adding favorite:", book.id);
-    try {
-      const isAlreadyFavorite = state.favorites.some(
-        (fav) => fav.id === book.id,
-      );
-      if (isAlreadyFavorite) {
-        console.log("[FavoritesContext] Book already favorite, skipping");
-        return;
-      }
+    const isAlreadyFavorite = state.favorites.some((fav) => fav.id === book.id);
+    if (isAlreadyFavorite) {
+      console.log("[FavoritesContext] Book already favorite, skipping");
+      return;
+    }
 
-      await addToFavorites(book);
-      dispatch({ type: "ADD_FAVORITE", payload: book });
-      console.log("[FavoritesContext] Favorite added successfully");
-    } catch (error) {
-      console.error("[FavoritesContext] Error adding favorite:", error);
+    await executeWithState(manager, "add_favorite", async () =>
+      addToFavorites(book),
+    );
+    dispatch({ type: "ADD_FAVORITE", payload: book });
+
+    if (manager.getError("add_favorite")) {
       dispatch({
         type: "FETCH_ERROR",
         payload:
-          error instanceof Error
-            ? error.message
-            : "Falha ao adicionar aos favoritos",
+          manager.getError("add_favorite") ??
+          "Falha ao adicionar aos favoritos",
       });
     }
   };
 
   const removeFavorite = async (bookId: string) => {
-    try {
-      await removeFromFavorites(bookId);
-      dispatch({ type: "REMOVE_FAVORITE", payload: bookId });
-    } catch (error) {
+    await executeWithState(manager, "remove_favorite", async () =>
+      removeFromFavorites(bookId),
+    );
+    dispatch({ type: "REMOVE_FAVORITE", payload: bookId });
+
+    if (manager.getError("remove_favorite")) {
       dispatch({
         type: "FETCH_ERROR",
         payload:
-          error instanceof Error
-            ? error.message
-            : "Falha ao remover dos favoritos",
+          manager.getError("remove_favorite") ??
+          "Falha ao remover dos favoritos",
       });
     }
   };
@@ -148,7 +163,7 @@ export const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
 
   useEffect(() => {
     refreshFavorites();
-  }, []);
+  }, [refreshFavorites]);
 
   return (
     <FavoritesContext.Provider

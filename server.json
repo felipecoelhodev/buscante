@@ -1,43 +1,30 @@
 {
   "favorites": [
     {
-      "id": "RY7kp2dT0jwC",
-      "title": "Arquitetura de Nuvem (AWS)",
-      "author": "Manoel Veras",
-      "publishedDate": "",
-      "publisher": "Brasport",
-      "pageCount": 417,
-      "categories": ["Computers"],
-      "description": "A computação de nuvem oferece inúmeros benefícios, incluindo elasticidade, pagamento pelo uso efetivo dos recursos, infraestrutura de autosserviço e automação baseada em APIs. Ela permite que as organizações tenham DATACENTERS automatizados e paguem somente por aquilo que utilizam. A plataforma utilizada para o desenho da arquitetura é a Amazon Web Services (AWS), que é abordada em detalhes e de forma estruturada. A própria Amazon utiliza a arquitetura AWS para operar um dos maiores varejos online do mundo. Empresas como Shell, Samsung, NASA, The New York Times, Grupo Pão de Açúcar, Gol Linhas Aéreas e SulAmérica Seguros já desfrutam dos benefícios da computação de nuvem e estabeleceram novas arquiteturas orientadas pela demanda. O livro traz uma abordagem sobre a construção de um DATACENTER utilizando a Arquitetura De Nuvem e a estratégia adotada foi estruturá-lo em três grandes partes; Aspectos Básicos, com conceitos, infraestrutura, precificação, identidade e acesso Serviços de Infraestrutura, sobre os serviços de computação, armazenamento, rede, banco de dados e gerenciamento; e Aspectos Avançados, cobrindo desenho da arquitetura, governança, segurança e continuidade.",
-      "thumbnail": "http://books.google.com/books/content?id=RY7kp2dT0jwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "previewLink": "http://books.google.com.br/books?id=RY7kp2dT0jwC&pg=PA16&dq=arquitetura&hl=&as_pt=BOOKS&cd=2&source=gbs_api",
-      "infoLink": "https://play.google.com/store/books/details?id=RY7kp2dT0jwC&source=gbs_api"
+      "id": "LEnHs53G0j0C",
+      "title": "Harry Potter Places",
+      "author": "C. D Miller",
+      "publishedDate": "2012-06-08",
+      "publisher": "First Edition Design Pub.",
+      "pageCount": 156,
+      "categories": ["Fiction"],
+      "description": "Welcome to Harry Potter Places Book Three--Snitch-Seeking in Southern England and Wales, the third of five guidebooks designed to help Potterites visit all 68 UK Potterverse places: real-life places mentioned in JKR's novels and movie film sites. Go to the website to find Book Three's Table of Contents and learn about all the Harry Potter Places travel guidebooks.",
+      "thumbnail": "https://books.google.com/books/content?id=LEnHs53G0j0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "previewLink": "https://books.google.com.br/books?id=LEnHs53G0j0C&pg=PR3&dq=harry+potter&hl=&as_pt=BOOKS&cd=17&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=LEnHs53G0j0C&source=gbs_api"
     },
     {
-      "id": "ZdFbEAAAQBAJ",
-      "title": "Arquitetura da Educação",
-      "author": "Rafael Diedrich",
-      "publishedDate": "2018-07-23",
-      "publisher": "Novas Edições Acadêmicas",
-      "pageCount": 95,
-      "categories": ["Education"],
-      "description": "A educação é um processo natural, ela se fundamenta no desenvolvimento interno do aluno. As crianças são boas por natureza, elas têm uma tendência natural para se desenvolverem. Existe um distanciamento entre todos os seres humanos, este distanciamento precisa ser reduzido com elementos tirados da realidade conforme diz Pestalozzi. Neste sentido, o arquiteto representa a arte de construir esteticamente e funcionalmente estruturas com embasamento cultural, filosófico, estrutural, se tornando uma ciência pluridisciplinar. A arquiteto busca saber do distanciamento entre o ser humano e os meios em que vive atuando de forma pluridisciplinar e realizando assim uma exegese para então reformular o espaços, tornando-os confortáveis e contextualizados com a realidade do homem da atualidade. O docente assim como o arquiteto reconhece a distância entre ele e o aluno?, trazendo consigo embasamento cultural, filosófico, estrutural para construir sua aula, analisar seus alunos, a cultura em que vivem pois hoje existe a necessidade dos professores se adatarem com os alunos diante da distância que os separam.",
-      "thumbnail": "http://books.google.com/books/content?id=ZdFbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "previewLink": "http://books.google.com.br/books?id=ZdFbEAAAQBAJ&pg=PA13&dq=arquitetura&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
-      "infoLink": "http://books.google.com.br/books?id=ZdFbEAAAQBAJ&dq=arquitetura&hl=&as_pt=BOOKS&source=gbs_api"
-    },
-    {
-      "id": "AMKf7RPUcuoC",
-      "title": "Google Sites and Chrome For Dummies",
-      "author": "Ryan Teeter, Karl Barksdale",
-      "publishedDate": "2009-01-27",
-      "publisher": "For Dummies",
-      "pageCount": 460,
+      "id": "fpAHEQAAQBAJ",
+      "title": "TypeScript Crash Course",
+      "author": "Daniel Cavalcante",
+      "publishedDate": "2024-05-14",
+      "publisher": "BPB Publications",
+      "pageCount": 345,
       "categories": ["Computers"],
-      "description": "Curious about Google Sites and how team collaboration Web sites can help you share documents online from various locations? Curious about Google’s new Chrome browser? Google Sites & Chrome For Dummies has what you want to know! Today, Google is so much more than another word for “search.” Google Sites & Chrome For Dummies shows you how to create great collaborative Web sites with Google Sites and surf the Web with the super-fast Google Chrome browser. Find out how they work with other Google Apps, too. You’ll learn to: Take advantage of free hosting, free tools, and a simple, straightforward interface with Google Sites Set up a Google account or Google Apps account Create wiki sites that let coworkers collaborate on projects or keep family members up to date Use Google gadgets to keep track of projects, manage calendars and documents, or display photos Integrate documents, spreadsheets, presentations, and other Google Apps into your site Work with Contact List, Google Talk, and Google Chat, and handle e-mail with Gmail Download and install the speedy Google Chrome browser Install browser plug-ins, enable offline access to Google Docs, and manage misbehaving tabs You’ll even find instructions and examples to help you plan sites for personal and business use, plus a sample college course site. With advice from Google Sites & Chrome For Dummies, you can make collaboration easy and have the high-speed Web at your fingertips.",
-      "thumbnail": "https://books.google.com/books/content?id=AMKf7RPUcuoC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "previewLink": "https://books.google.com.br/books?id=AMKf7RPUcuoC&dq=google&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
-      "infoLink": "https://books.google.com.br/books?id=AMKf7RPUcuoC&dq=google&hl=&as_pt=BOOKS&source=gbs_api"
+      "description": "Build scalable and reliable web applications with TypeScript KEY FEATURES ● Learn about basic and advanced TypeScript concepts. ● Build a simple Todo application using TypeScript with JavaScript, React, and Node. ● Using TypeScript to write tests, incorporating third-party libraries, and deploying to production. DESCRIPTION Navigating the dynamic landscape of web development can be a daunting task, \"TypeScript Crash Course\" is a guide to help you on the journey of mastering TypeScript, one of today's most sought-after skills in the tech market. Starting from the basics and core principles to gradually building up to more advanced concepts, this book will help you move to practical examples of converting an application from JavaScript, React, and Node to TypeScript. This book also offers insights into leveraging TypeScript for both front-end and back-end development, ensuring readers can tackle any project with confidence, from development to deployment. This guide is not just about learning a new programming language; it is about enhancing your career in the tech industry by building more reliable applications. This book focuses on applying TypeScript in diverse practical scenarios to significantly shorten your learning curve. It also dispels common myths and misconceptions about TypeScript, equipping you with the knowledge to navigate your career paths successfully. WHAT YOU WILL LEARN ● Master TypeScript fundamentals and more advanced concepts to develop scalable web applications. ● Transition seamlessly from JavaScript to TypeScript, enhancing code reliability and maintainability. ● Apply TypeScript in real-world scenarios, such as migrating JavaScript applications, designing user interfaces with React, and developing server-side applications with Node. ● Understand and implement advanced TypeScript features, such as generics and decorators. ● Selecting the right tools and frameworks to boost project efficiency and performance. WHO THIS BOOK IS FOR This book is ideal for web developers, software engineers, and programming enthusiasts eager to expand their JavaScript skills into TypeScript. It is perfect for those aiming to enhance their web development prowess and employability in the tech industry. TABLE OF CONTENTS 1. Introduction to TypeScript 2. Installation and Setup 3. TypeScript's Fundamentals 4. Structuring and Extending Types 5. Working with Advanced TypeScript Features 6. Migrating a JavaScript Web App to TypeScript 7. Adding TypeScript to a React Application 8. Using TypeScript with a Node.js Application 9. Building TypeScript for Production 10. Best Practices and Next Steps",
+      "thumbnail": "https://books.google.com/books/content?id=fpAHEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "previewLink": "https://books.google.com.br/books?id=fpAHEQAAQBAJ&pg=PT25&dq=typescript&hl=&as_pt=BOOKS&cd=5&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=fpAHEQAAQBAJ&source=gbs_api"
     }
   ]
 }
