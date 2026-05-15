@@ -1,4 +1,4 @@
-# Buscante 
+# Library | Buscante 
 
 Desenvolvido com React, o Buscante vai além de uma interface de busca: é um estudo aprofundado sobre padrões de otimização para aplicações web de alto desempenho. O projeto destaca-se pela aplicação de estratégias modernas de paralelismo, controle de fluxo e normalização de dados, garantindo uma experiência fluida mesmo ao lidar com múltiplas fontes de dados(endpoints) e estados assíncronos complexos. A plataforma permite buscar livros de forma abrangente, visualizar detalhes técnicos e gerenciar uma lista personalizada de favoritos.
 
