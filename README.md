@@ -1,3 +1,1 @@
-Em Desenvolvimento...
-
-Falta lidar e implementar com Padrões avançados e otimizações
+a
